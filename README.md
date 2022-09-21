@@ -1,4 +1,4 @@
-<h1>Mostly JavaScript projects with base of html</h1>
+<h1>Mostly JavaScript projects with base of HTML</h1>
 <h3>Description:</h3>
 
 ```JavaScrpit
