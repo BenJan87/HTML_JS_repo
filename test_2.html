@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Debugger</h2>
+
+<p id="demo"></p>
+
+<p>With the debugger turned on, the code below should stop executing before it executes the third line.</p>
+
+<script>
+debugger;
+let i = 0;
+while (true) {
+    document.getElementById("demo").innerHTML = i;
+    i++;
+    if (i > 30) {break}
+}
+debugger;
+let w = 0;
+</script>
+</body>
+</html>

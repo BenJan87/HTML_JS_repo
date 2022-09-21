@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>What Can JavaScript Do?</h2>
+
+        <p id="demo">JavaScript can change HTML content.</p>
+        <p id="text1">Tak tak</p>
+        <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+        <br><button type="button" onclick="uj()">Kochasz piwo?</button>
+        <script type="text/JavaScript">
+            function uj() {
+                if (document.getElementById("text1").innerHTML == "Tak tak") {
+                    document.getElementById("text1").innerHTML = "Nie Nie"
+                }
+                else {
+                    document.getElementById("text1").innerHTML = "Tak tak"
+                }
+            }
+        </script>
+    </body>
+</html>

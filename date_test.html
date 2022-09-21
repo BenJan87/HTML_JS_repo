@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body style="background-color:rgb(19, 127, 170)">
+        <button type="button" 
+    onmouseover="document.getElementById('obj_1').innerHTML = date()"
+    onmouseout="document.getElementById('obj_1').innerHTML = ''">
+            What date is today?
+        </button>
+        <p>Date:</p>
+        <p id="obj_1"></p>
+        <script type="text/JavaScript">
+            var x = Date()
+            alert(x)
+            console.log(x)
+            function date() {
+                return x
+            }
+        </script>
+    </body>
+</html>

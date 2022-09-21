@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <h1>Arrays</h1>
+    <body style = "background-color: rosybrown;">
+        <p id="st"><h2>Tak:</h2><ul><li>1</li><li>2</li></ul></p>
+        <script type="text/JavaScript">
+            let x = [1, 2, 5];
+            let w = x[x.length - 1];
+            console.log(w);
+
+            let tmp = x.shift();
+            x.push(tmp);
+            console.log(x); //same as unshift(lastElement) -> returns new array length
+        </script>
+    </body>
+</html>
