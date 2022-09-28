@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1 style="font-family:Helvetica;color:rgb(211, 211, 77);"><center>Tic-Tac-Toe</center></h1>
+    </head>
+    <body style="font-family:Helvetica;color:rgb(211, 211, 77);font-size:large;" background="tur_paint.png">
+        <center>
+        <h2>Choose difficulty:</h2>
+        <input type="checkbox" id="easy" onclick="get_gui();">easy<input type="checkbox" id="medium">medium<input type="checkbox" id="impossible">impossible
+        <p id="0"></p>
+        <p id="1"></p>
+        <p id="2"></p>
+        <p id="3"></p>
+        <p id="4"></p>
+        <p id="5"></p>
+        <p id="6"></p>
+        <p id="7"></p>
+        <p id="8"></p>
+        <p id="9"></p>
+        <p id="10"></p>
+        <p id="11"></p>
+        <p id="12"></p>
+        <br>
+        <!-- <p>lol</p> -->
+        
+        </center>
+        <script type="text/JavaScript">
+            // function checkbox_easy(checkbox) {
+            //     let line = document.getElementById("11").innerHTML 
+            //     if (checkbox.checked) {
+            //         line = "easy"
+            //     }
+            // }
+            function get_gui () {
+                for (let i = 0; i <= 13; i += 4) {
+                    let new_str="+ - + - + - +";
+                    let iden = i.toString();
+                    document.getElementById(i).innerHTML = new_str;
+                }
+            }
+            
+            
+        </script>
+    </body>
+
+
+
+
+
+
+
+</html>
