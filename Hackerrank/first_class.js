@@ -5,8 +5,6 @@ class Polygon {
     perimeter() {
         let count = 0;
         this.sides.forEach(element => {count += element});
-        console.log("2");
-        debbuger;
         return count;
     }
 }
