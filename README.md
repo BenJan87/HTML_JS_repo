@@ -4,7 +4,7 @@
 ```JavaScrpit
 console.log("Hello World!")
 ```
-This repo is for JavaScript project from AGH academic course with little html
+This repo is for JavaScript project from AGH academic course with some html files.
 
 <h3>Profiles:</h3>
 <p> - Github profile: https://github.com/BenJan87 </p>
