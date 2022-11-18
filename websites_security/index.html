@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Dynamic P Application</title>
+    <style>
+    * {
+        font-size:18px;
+        font-weight:bold;
+        color: #2e2e2e;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+        const el = document.getElementById('container')
+        const dynamic_paragraph = document.createElement('p')
+        const dp_content = document.createTextNode('Hello from dynamically added <P>aragraph!')
+
+        dynamic_paragraph.appendChild(dp_content)
+        el.appendChild(dynamic_paragraph)
+    </script>
+</body>
+</html>

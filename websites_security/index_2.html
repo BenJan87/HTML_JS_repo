@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Redirection</title>
+</head>
+<body>
+    </div>
+    <script>
+        
+        // imagine that read url from  GET parameter routine goes here...
+        // but we just hardcode it for now :)
+        const url = 'False'
+        
+
+        function redirect() {
+            // I will redirect you! Now!
+            if (url) {
+                location.href = url
+            } else {
+                location.href = 'https://company.com/__internal__/supersecretadminpanel'
+            }
+        }
+
+
+        setTimeout( redirect, 10000 )
+    </script>
+</body>
+</html>
