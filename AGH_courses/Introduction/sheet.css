@@ -1,0 +1,85 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .azure {
+    background-color:lightblue;
+    border: 1px solid black;
+    box-shadow:  0 0 2px 2px rgb(0, 0, 0);
+    padding: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 2vw;
+  }
+
+  aside  {
+    /* width: 500px; */
+    /* position: absolute; */
+    /* top: 120px;
+    left: 60pc; */
+
+  }
+
+  aside li {
+    margin-left: 2em;
+  }
+
+  footer {
+    /* position: absolute;
+    top: 570px;
+    width: 100pc; */
+    margin-bottom: 1em;
+    }
+
+  header {
+    /* width: 100pc; */
+  }
+
+  main {
+    
+    /* width: 500px;
+    position: absolute; 
+    top: 200px; */
+  }
+
+  nav {  
+    /* width: 150px;
+    position: absolute;
+    top: 120px; */
+    /* width: 100%; */
+    }
+  /* nav ul {
+    
+  } */
+  nav li {
+    margin-left: 2em;
+  }
+
+  .animated_text {
+    animation: changing_colors 2s infinite alternate;
+  }
+
+  @keyframes changing_colors
+  {
+  from {color: crimson;}
+  to {color: blue;}
+  from {color: blue;}
+  to {color: crimson;}
+  }
+
+  @-webkit-keyframes changing_colors
+  {
+    from {color: crimson;}
+    to {color: blue;}
+    from {color: blue;}
+    to {color: crimson;}
+  }
+
+  @media(min-width: 760px) {
+    nav{
+      width: 20%;
+    }
+  }
