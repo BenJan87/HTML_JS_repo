@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Canvas</title>
+        <script type="text/javascript">
+            function draw()
+            {
+                var canvas = document.getElementById('image');
+                var ctx = canvas.getContext('2d'); 
+                
+                // left wheel
+                ctx.beginPath();
+                ctx.arc(80, 150, 30, 0, 2 * Math.PI);
+                ctx.stroke();
+
+                //right wheel
+                ctx.beginPath();
+                ctx.arc(200, 150, 30, 0, 2 * Math.PI);
+                ctx.stroke();
+
+                //from left wheel - direction right wheel
+                ctx.moveTo(80, 150);
+                ctx.lineTo(140, 150);
+                ctx.stroke();
+
+                //from left wheel - direction saddle
+                ctx.moveTo(80, 150);
+                ctx.lineTo(120, 110);
+                ctx.stroke();
+
+                //from center of lower line to saddle
+                ctx.moveTo(140, 150);
+                ctx.lineTo(110, 90);
+                ctx.stroke();
+
+                //saddle
+                ctx.moveTo(110, 90);
+                ctx.lineTo(120, 95);
+                ctx.stroke();
+
+                //from center of lower line to steering wheel
+                ctx.moveTo(140, 150);
+                ctx.lineTo(180, 110);
+                ctx.stroke();
+
+                //from steering wheel to bottom saddle
+                ctx.moveTo(180, 110);
+                ctx.lineTo(120, 110);
+                ctx.stroke();
+
+                //from center of wheel to steering wheel
+                ctx.moveTo(200, 150);
+                ctx.lineTo(175, 100);
+                ctx.stroke();
+
+                // steering wheel
+                ctx.moveTo(175, 100);
+                ctx.lineTo(185, 95);
+                ctx.stroke();
+            }
+        </script>
+    </head>
+    <body onload="draw();">
+        <canvas id="image" width="300" height="300" style="border:1px solid #000000;"></canvas>
+    </body>
+</html>
