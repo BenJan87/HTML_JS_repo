@@ -10,6 +10,7 @@ function create_obj(num, arr) {
         obj = {x: arr[i], y: arr[i+1]};
         arr_obj.push(obj);
     }
+    console.log(arr_obj)
     return arr_obj;
 }
 

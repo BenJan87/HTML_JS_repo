@@ -1,5 +1,4 @@
-const arry = [1, 2, 1, 3, 4, 3, 5];
+let n = 3
+let countEnd = (n%2 == 0) ? n+1 : n
 
-const toFindDuplicates = arry => arry.filter((item, index) => arr.indexOf(item) !== index)
-const duplicateElementa = toFindDuplicates(arry);
-console.log(duplicateElements);
+console.log(countEnd)
