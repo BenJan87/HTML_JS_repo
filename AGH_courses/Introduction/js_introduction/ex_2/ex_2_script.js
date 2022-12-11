@@ -21,8 +21,8 @@ function suma(napis) {
     });
 
     if (count.length === 0) {count = 0;}
-    count = parseInt(count);
-    return count;
+    return parseInt(count);
+    
     // return sum + count;
 }
 

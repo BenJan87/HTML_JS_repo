@@ -81,10 +81,10 @@
   }
 
   @keyframes bike_animation_left {
-    0% {left: 0em; top: 0em;}
+    /* 0% {left: 0em; top: 0em;}
     33%  {left: -5em; top: 0em}
     66% {left: 5em; top: 0em;}
-    100% {left: 0em; top: 0em}
+    100% {left: 0em; top: 0em} */
 
     0% {
       transform: rotate(0deg);
@@ -103,10 +103,10 @@
   }
 
   @keyframes bike_animation_right {
-    0% {left: 0em; top: 0em;}
+    /* 0% {left: 0em; top: 0em;}
     33% {left: 5em; top: 0em;}
     66%  {left: -5em; top: 0em}
-    100% {left: 0em; top: 0em}
+    100% {left: 0em; top: 0em} */
 
     0% {
       transform: rotate(0deg);
