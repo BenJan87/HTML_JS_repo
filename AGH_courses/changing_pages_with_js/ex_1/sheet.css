@@ -15,6 +15,10 @@
     font-size: 2vw;
   }
 
+  .dis {
+    display: none;
+  }
+
   /* aside  {
 
   } */
@@ -73,18 +77,18 @@
       font-size: 1.3vw;
     }
 
-    nav {
+    .nav {
       width: 20%;
     }
     
-    aside  {
+    .aside  {
       position: absolute;
       width: 45%;  
       right: 0;
       top: 7vw;
     }
 
-    main {
+    .main {
       width: 43%;  
     }
 
