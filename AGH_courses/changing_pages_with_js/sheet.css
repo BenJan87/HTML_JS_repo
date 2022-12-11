@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .azure {
+    background-color:lightblue;
+    border: 1px solid black;
+    box-shadow:  0 0 2px 2px rgb(0, 0, 0);
+    padding: 1em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 2vw;
+  }
+
+  /* aside  {
+
+  } */
+
+  .li {
+    margin-left: 2em;
+  }
+
+  .footer {
+    margin-bottom: 1em;
+  }
+
+  /* header {
+
+  } */
+
+  /* main {
+    
+  } */
+
+  /* nav {  
+    
+    } */
+
+  /* nav ul {
+    
+  } */
+
+  /* nav li {
+    margin-left: 2em;
+  } */
+
+  .animated_text {
+    animation: changing_colors 2s infinite alternate;
+  }
+
+  @keyframes changing_colors
+  {
+  from {color: crimson;}
+  to {color: blue;}
+  from {color: blue;}
+  to {color: crimson;}
+  }
+
+  @-webkit-keyframes changing_colors
+  {
+    from {color: crimson;}
+    to {color: blue;}
+    from {color: blue;}
+    to {color: crimson;}
+  }
+
+  @media(min-width: 760px) {
+    
+    .azure {
+      font-size: 1.3vw;
+    }
+
+    nav {
+      width: 20%;
+    }
+    
+    aside  {
+      position: absolute;
+      width: 45%;  
+      right: 0;
+      top: 7vw;
+    }
+
+    main {
+      width: 43%;  
+    }
+
+  }
