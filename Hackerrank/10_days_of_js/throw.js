@@ -4,4 +4,4 @@ function isPositive(n) {
     else throw new Error("Zero Error")
 }
 
-console.log(isPositive(5))
+console.log(isPositive(-3))
