@@ -1,0 +1,20 @@
+{
+  "name": "first_databases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-json": "^1.0.0",
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3"
+  }
+}

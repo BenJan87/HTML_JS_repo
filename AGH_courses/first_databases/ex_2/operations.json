@@ -1,0 +1,28 @@
+[
+    {
+      "type": "add",
+      "x": 1,
+      "y": 2
+    },
+    {
+      "type": "subtract",
+      "x": 3,
+      "y": 4
+    },
+    {
+      "type": "multiply",
+      "x": 5,
+      "y": 6
+    },
+    {
+      "type": "divide",
+      "x": 7,
+      "y": 8
+    },
+    {
+        "type": "divide",
+        "x": 59000,
+        "y": 45
+      }
+]
+  

@@ -72,12 +72,12 @@
 
   .bike-left {
     position: relative;
-    animation: bike_animation_left 4s infinite;
+    animation: bike_animation_left 0.0001s infinite;
   }
 
   .bike-right {
     position: relative;
-    animation: bike_animation_right 4s infinite;
+    animation: bike_animation_right 0.0001s infinite;
   }
 
   @keyframes bike_animation_left {
