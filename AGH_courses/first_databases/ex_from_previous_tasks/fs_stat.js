@@ -22,4 +22,4 @@ try {
 
 catch (error) {
     console.error(`Błąd: ${error.message}`);
-}
+}   

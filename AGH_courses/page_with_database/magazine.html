@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <h1>Welcome to magazine page!</h1>
+    <h2>Add a bike</h2>
+    <body>
+        <form action="/magazine" method="POST" onsubmit="return checkInputs()">
+            <input name="bike_model" placeholder="Bike model">
+            <input id="amount" name="amount" placeholder="amount">
+            <input type="submit" value="add to magazine">
+        </form>
+        <a href="/logout">Log out</a>
+        <script>
+            function checkInputs() {
+                try {
+                    var amount = parseInt(document.getElementById("amount").value);
+                    if (amount <= 0 || Number.isNaN(amount)) {throw new Error("Negative");};
+                    return true;
+                }
+                catch(err) {alert("Incorrect number for amount"); return false;}
+            }
+        </script>
+    </body>
+</html>

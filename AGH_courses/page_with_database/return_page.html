@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <h1>Return a bike</h1>
+    <body>
+        <form action="/return" method="POST" onsubmit="return checkInputs()">
+            <input id="first_name" name="first_name" placeholder="Name">
+            <input id="surname" name="surname" placeholder="Surname">
+            <input id="time_return" name="time_return" placeholder="time eg '04:43', '14:19'">
+            <input id="model" name="model" placeholder="model">
+            <input type="submit" value="Return a bike">
+        </form>
+        <a href="/">Go to main page</a>
+        <script>
+            function checkInputs() {
+                let name = document.getElementById('first_name').value;
+                let surname = document.getElementById('surname').value;
+                let model = document.getElementById('model').value;
+                
+                if (!name.length || !surname.length || !model.length) {
+                    alert("Name, surname or bike field is empty")
+                    return false;
+                }
+
+                const firstElementArr = [];
+                for (let i = 0; i < 24; i++) {
+                    let str = i.toString();
+                    if (str.length === 1) {str = '0' + str;}
+                    firstElementArr.push(str);
+                }
+
+                const secElementArr = [];
+                for (let i = 0; i < 60; i++) {
+                    let str = i.toString();
+                    if (str.length === 1) {str = '0' + str;}
+                    secElementArr.push(str);
+                }
+
+                let timeArr = document.getElementById('time_rent').value.split(':');
+                if (timeArr.length !== 2) {
+                    alert("Incorrect time format!");
+                    return false;
+                }
+                if (firstElementArr.includes(timeArr[0]) && secElementArr.includes(timeArr[1])) {return true;}
+                
+                alert("Incorrect time format!");
+                return false;
+            }
+        </script>
+    </body>
+</html>
