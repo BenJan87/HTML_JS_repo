@@ -33,7 +33,8 @@ const connection = mysql.createConnection({
 function authenticate(req, res, next) {
     if (req.session.loggedIn) {
       next();
-    } else {
+    } 
+    else {
       res.redirect('/');
     }
 }
@@ -53,11 +54,11 @@ router.get('/', (req, res) => {
 router.post('/redirect', (req, res) => {
     var page = req.body.parameter;
     res.redirect(page);
-})
+});
 
 router.get('/rent', (req, res) => {
     res.sendFile(__dirname + "/rent_page.html");
-})
+});
 
 router.post('/rent', (req, res) => {
     var name = req.body.first_name;
@@ -110,9 +111,9 @@ router.post('/return', (req, res) => {
     var time_return = req.body.time_return;
     var model = req.body.model;
 
-    let buyerQuery = "SELECT * FROM script.buyers WHERE name = ? and surname = ? and model = ? and time_return = '-'"
-    let endInsertionQuery = "UPDATE script.buyers SET time_return = ? WHERE name = ? and surname = ? and model = ?"
-    let updateQuery = "UPDATE script.magazine SET amount = amount + 1 where model = ?"
+    let buyerQuery = "SELECT * FROM script.buyers WHERE name = ? and surname = ? and model = ? and time_return = '-'";
+    let endInsertionQuery = "UPDATE script.buyers SET time_return = ? WHERE name = ? and surname = ? and model = ?";
+    let updateQuery = "UPDATE script.magazine SET amount = amount + 1 where model = ?";
 
     connection.query(buyerQuery, [name, surname, model], (err, result, fields) => {
         if (result.length > 0) {
@@ -128,9 +129,9 @@ router.post('/return', (req, res) => {
             return;
         }
 
-    })
+    });
 
-})
+});
 
 router.get('/login', (req, res) => {
     res.sendFile(__dirname + "/login_page.html");
@@ -147,8 +148,8 @@ router.post('/login', encoder,(req, res) => {
             res.redirect("/magazine");
         }
         else {res.send('<script>alert("Invalid username or password!"); window.location.href = "/login";</script>');}
-    })
-})
+    });
+});
 
 router.get("/magazine", authenticate,(req, res) => {
     res.sendFile(__dirname + "/magazine.html")
@@ -160,8 +161,8 @@ router.post("/magazine", (req, res) => {
 
 
     var checkIfAlreadyExistQuery = "SELECT * FROM script.magazine where model = ?";
-    var updateQuery = "UPDATE script.magazine SET amount = amount + ? WHERE model = ?"
-    var addMagazineQuery = "INSERT INTO script.magazine (model, amount) VALUES (?, ?)"
+    var updateQuery = "UPDATE script.magazine SET amount = amount + ? WHERE model = ?";
+    var addMagazineQuery = "INSERT INTO script.magazine (model, amount) VALUES (?, ?)";
     
     
     
@@ -169,24 +170,24 @@ router.post("/magazine", (req, res) => {
         if (result.length > 0) {
             connection.query(updateQuery, [amount, model], (err, result, fields) => {
                 res.send('<script>alert("Amount updated"); window.location.href = "/magazine";</script>');
-            })
+            });
         }
 
         else {
             connection.query(addMagazineQuery, [model, amount], (err, result, fields) => {
                 res.send('<script>alert("Bikes added"); window.location.href = "/magazine";</script>');
-            })
+            });
         }
 
-    })
-})
+    });
+});
 
 router.get("/logout", (req, res) => {
     req.session.destroy(() => {
         res.redirect('/login');
     });
-})
+});
 
 app.listen(3000, () => {
     console.log('App listening on port 3000');
-})
+});
