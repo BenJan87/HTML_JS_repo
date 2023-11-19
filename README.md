@@ -1,7 +1,7 @@
 <h1>Mostly JavaScript projects with base of HTML</h1>
 <h3>Description:</h3>
 
-```JavaScipt
+```JavaScript
 console.log("Hello World!")
 ```
 This repo is for JavaScript project from AGH academic course with some html files.
